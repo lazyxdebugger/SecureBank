@@ -1,0 +1,17 @@
+<h1>Confirm Transfer</h1>
+
+<p>Receiver: {{ receiver }}</p>
+
+<p>Amount: ₹{{ amount }}</p>
+
+<p>Description: {{ description }}</p>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <button type="submit">Confirm Transfer</button>
+</form>
+
+<br>
+
+<a href="/transfer/">Cancel</a>
